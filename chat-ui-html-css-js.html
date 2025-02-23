@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <title>Chat UI</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #121212;
+            color: white;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 260px;
+            background-color: #1E1E1E;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .new-chat {
+            background-color: #292929;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .recent {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .chat-item {
+            font-size: 14px;
+            color: #BBBBBB;
+            cursor: pointer;
+            padding: 5px 0;
+        }
+
+        .chat-item:hover {
+            color: white;
+        }
+
+        .more-option {
+            font-size: 14px;
+            color: #BBBBBB;
+            cursor: pointer;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .more-option:hover {
+            color: white;
+        }
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .greeting {
+            font-size: 28px;
+            font-weight: bold;
+            color:white;
+                }
+
+            .ask-gemini-container {
+            position: absolute;
+            bottom: 20px;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            background-color: #1E1E1E;
+            border-radius: 25px;
+            padding: 10px 15px;
+            border: 1px solid #333;
+        }
+
+       /* .ask-gemini-icon {
+            color: white;
+            font-size: 18px;
+            margin-right: 10px;
+        } */
+
+        .ask-gemini-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 14px;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <button class="menu-btn">&#9776;</button>
+        <button class="new-chat">+ New chat</button>
+
+        <div class="recent">Recent</div>
+        <ul class="chat-list">
+            <li class="chat-item">Employee Performance Review</li>
+            <li class="chat-item">Power Apps Project Management</li>
+            <li class="chat-item">Write JSON File in JS</li>
+            <li class="chat-item">ITOM Keywords for Power Apps</li>
+            <li class="chat-item">Core Web Vitals in Angular</li>
+        </ul>
+        <div class="more-option">▾ More</div>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="greeting">Hello, Ravi Kumar</div>
+        <div class="ask-gemini-container">
+    
+
+            <input class="ask-gemini-input" type="text" placeholder="Ask Gemini">
+            <i class="fa fa-microphone" style="font-size:18px"></i>
+            
+
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
